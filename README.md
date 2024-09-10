@@ -1,0 +1,1 @@
+# was-ai-practitioner-cheatsheet
