@@ -1,3 +1,11 @@
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
+
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
 Published in September 12th, 2024
 
 Reference: [AWS Certified AI Practitioner - Exam Prep Course](https://explore.skillbuilder.aws/learn/course/19554/Exam%2520Prep%2520Standard%2520Course%253A%2520AWS%2520Certified%2520AI%2520Practitioner%2520%28AIF-C01%29)
@@ -60,3 +68,10 @@ This reference guide should provide a structured way for you to organize and rev
 - Domain 03: Application of Foundation Models
 - Domain 04: Guidelines for Responsible AI
 - Domain 05: Security, Compliance, and Governance for AI Solutions
+
+----
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
