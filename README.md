@@ -4,6 +4,8 @@ Reference: [AWS Certified AI Practitioner - Exam Prep Course](https://explore.sk
 
 # AWS AI Practitioner Certification - CheatSheet
 
+This reference guide should provide a structured way for you to organize and review the material needed to prepare for the AWS AI Practitioner Certification. The guide will not replace the available content in [AWS Skillbuilder Exam Preparation Course](https://explore.skillbuilder.aws/learn/course/19554/Exam%2520Prep%2520Standard%2520Course%253A%2520AWS%2520Certified%2520AI%2520Practitioner%2520%28AIF-C01%29), but will serve as a content index to help you keep track of all the knowledge needed to successfully pass the exam.
+
 ## Exam Guide
 
 ### Exam description
