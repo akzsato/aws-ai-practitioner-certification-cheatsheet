@@ -6,11 +6,11 @@
 
 Published in September 12th, 2024
 
-Reference: [AWS Certified AI Practitioner - Exam Prep Course](https://explore.skillbuilder.aws/learn/course/19554/Exam%2520Prep%2520Standard%2520Course%253A%2520AWS%2520Certified%2520AI%2520Practitioner%2520%28AIF-C01%29)
+Reference: [AWS Certified AI Practitioner - Exam Prep Course](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/19554/exam-prep-standard-course-aws-certified-ai-practitioner-aif-c01)
 
 # AWS AI Practitioner Certification - CheatSheet
 
-This reference guide should provide a structured way for you to organize and review the material needed to prepare for the AWS AI Practitioner Certification. The guide will not replace the available content in [AWS Skillbuilder Exam Preparation Course](https://explore.skillbuilder.aws/learn/course/19554/Exam%2520Prep%2520Standard%2520Course%253A%2520AWS%2520Certified%2520AI%2520Practitioner%2520%28AIF-C01%29), but will serve as a content index to help you keep track of all the knowledge needed to successfully pass the exam.
+This reference guide should provide a structured way for you to organize and review the material needed to prepare for the AWS AI Practitioner Certification. The guide will not replace the available content in [AWS Skillbuilder Exam Preparation Course](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/19554/exam-prep-standard-course-aws-certified-ai-practitioner-aif-c01), but will serve as a content index to help you keep track of all the knowledge needed to successfully pass the exam.
 
 ----
 
@@ -79,7 +79,7 @@ This reference guide should provide a structured way for you to organize and rev
 >
 > - For an exam self-entitled as "Practitioner", I considered it a relatively rough test
 > - I would consider it as a "Specialty Exam", because it implies knowledge in domains such as: endpoints, API calls, service integration, IAM, KMS, S3 and other topics required by an SA Associate Exam.
-> - The AWS Skillbuilder's Exam Prep Course is very complete and provides support to face this exam with ease. There are about 6 hours of videos, in addition to a 20-question practice set. If you can have access to the Enhanced Exam Prep Course (which requires a paid subscription), it would be awesome because adds a plenty of more questions to the Practice Set, grouped by knowledge domain which will give you a clear perspective of needed domains to reinforce study. Also I would include valuable Flashcards, Lab assessment and an Escape Room game to validate your knowledge.
+> - The [AWS Skillbuilder's Standard Exam Prep Course](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/19554/exam-prep-standard-course-aws-certified-ai-practitioner-aif-c01) is very complete and provides support to face this exam with ease. There are about 6 hours of videos, in addition to a [20-question practice set](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/19790/exam-prep-official-practice-question-set-aws-certified-ai-practitioner-aif-c01-english). If you can have access to the [Enhanced Exam Prep Course](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/20536/exam-prep-enhanced-course-aws-certified-ai-practitioner-aif-c01-english-amazon) (which requires a paid subscription), it would be awesome because adds a plenty of more questions to the Practice Set, grouped by knowledge domain which will give you a clear perspective of needed domains to reinforce study. Also I would include valuable Flashcards, Lab assessment and an Escape Room game to validate your knowledge.
 
 ----
 
