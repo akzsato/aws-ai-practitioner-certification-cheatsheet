@@ -1,10 +1,8 @@
-[![CC BY 4.0][cc-by-shield]][cc-by]
-
-
-
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+[![CC BY 4.0][cc-by-shield]][cc-by]
 
 Published in September 12th, 2024
 
@@ -13,6 +11,8 @@ Reference: [AWS Certified AI Practitioner - Exam Prep Course](https://explore.sk
 # AWS AI Practitioner Certification - CheatSheet
 
 This reference guide should provide a structured way for you to organize and review the material needed to prepare for the AWS AI Practitioner Certification. The guide will not replace the available content in [AWS Skillbuilder Exam Preparation Course](https://explore.skillbuilder.aws/learn/course/19554/Exam%2520Prep%2520Standard%2520Course%253A%2520AWS%2520Certified%2520AI%2520Practitioner%2520%28AIF-C01%29), but will serve as a content index to help you keep track of all the knowledge needed to successfully pass the exam.
+
+----
 
 ## Exam Guide
 
@@ -61,6 +61,8 @@ This reference guide should provide a structured way for you to organize and rev
 | Domain 05: Security, Compliance, and Governance for AI Solutions | 14%       |
 | **Total**                                                    | **100%**  |
 
+----
+
 ## Table of Contents
 
 - Domain 01: Fundamentals of AI and ML
@@ -68,6 +70,16 @@ This reference guide should provide a structured way for you to organize and rev
 - Domain 03: Application of Foundation Models
 - Domain 04: Guidelines for Responsible AI
 - Domain 05: Security, Compliance, and Governance for AI Solutions
+
+----
+
+## Personal Notes
+
+> [!TIP]
+>
+> - For an exam self-entitled as "Practitioner", I considered it a relatively rough test
+> - I would consider it as a "Specialty Exam", because it implies knowledge in domains such as: endpoints, API calls, service integration, IAM, KMS, S3 and other topics required by an SA Associate Exam.
+> - The AWS Skillbuilder's Exam Prep Course is very complete and provides support to face this exam with ease. There are about 6 hours of videos, in addition to a 20-question practice set. If you can have access to the Enhanced Exam Prep Course (which requires a paid subscription), it would be awesome because adds a plenty of more questions to the Practice Set, grouped by knowledge domain which will give you a clear perspective of needed domains to reinforce study. Also I would include valuable Flashcards, Lab assessment and an Escape Room game to validate your knowledge.
 
 ----
 
