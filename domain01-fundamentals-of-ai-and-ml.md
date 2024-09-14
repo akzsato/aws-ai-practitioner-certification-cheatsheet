@@ -27,8 +27,8 @@ Machine learning is a branch of AI and computer science that focuses on use of d
 #### Deep Learning 
 Deep learning is a type of machine learning model that is inspired by human brains using layers of neural networks to process information. Example: Recognizing human speech and objects and images.
 
-
 ### What AI Can Do?
+
 #### Recognizing Patterns And Make Predictions
 An AI model can analyze the patterns in the past and forecast how many customers will be in the store on a given day in the future. Predictions that AI makes are called **inferences**. Note that an inference is basically an educated guess, so the model gives a probabilistic result. 
 
@@ -60,7 +60,7 @@ Machine Learning (ML) is the science of developing algorithms and statistic mode
 - A trained model is then able to make accurate predictions and produce output from new data that it hasn't seen during training. This is known as **inference**.
 
 ### Data Types
-ML models can be trained on different types of data from various sources.
+ML models can be trained on different types of data from various sources:
 
 #### Structured Data
 - This type of data is stored as rows in a table with columns, which can serve as the features for an ML model.
@@ -76,9 +76,13 @@ ML models can be trained on different types of data from various sources.
 - Examples include images, video, and text files, or social media posts.
 - Typically stored as objects in an object storage system like Amazon S3.
 
-Time series data is important for training models that need to predict future trends. Each data record is labeled with a timestamp, and stored sequentially. This example shows the performance metrics for microservice, including the used memory, CPU percentage, and transactions per second. A machine learning model could discover the patterns in this data. It could then use it to proactively scale out the infrastructure for the service before load is expected to increase. Depending on the sampling rate, time series data captured for long periods can get quite large and be stored in Amazon S3 for model training.
+>[!TIP]
+>
+> Time series data is important for training models that need to predict future trends. Each data record is labeled with a timestamp, and stored sequentially. A machine learning model could discover the patterns in this data.
 
-To create a machine learning model, we need to start with an algorithm which defines the mathematical relationship between outputs and inputs. In this simple example of linear regression, we want to find the best fit for a line to match the input data. Model parameters that are adjusted iteratively during the training process to find the best-fitting model. To determine the best fit, we look for the parameter values that minimize the errors. When the model training is complete, it's ready to begin making inferences.
+>[!IMPORTANT]
+>
+> A machine learning model starts with an algorithm which defines the mathematical relationship between outputs and inputs. A simple example is linear regression which objective is to find the best fit for a line to match the input data. Model parameters that are adjusted iteratively during the training process to find the best-fitting model. To determine the best fit, we look for the parameter values that minimize the errors. When the model training is complete, it's ready to begin making **inferences**.
 
 ----
 
@@ -165,22 +169,21 @@ There are several distinct machine learning styles that can be used depending on
 - Disparities in the performance of a model across different groups.
 - The results are skewed in favor of or against an outcome for a particular class.
 
-
-The quality of a model depends on the underlying data quality and quantity. Also, if a model is showing bias, the weight of features that are introducing noise can be directly adjusted by the data scientists. For example, it could completely remove gender consideration by the model. Fairness constraints, such as age and sex discrimination, should be identified at the beginning before creating a model. Training data should be inspected and evaluated for potential bias, and models need to be continually evaluated by checking their results for fairness.
+>[!IMPORTANT]
+>
+> The quality of a model depends on the underlying data quality and quantity. Also, if a model is showing bias, the weight of features that are introducing noise can be directly adjusted by the data scientists. Fairness constraints should be identified at the beginning before creating a model. Training data should be inspected and evaluated for potential bias, and models need to be continually evaluated by checking their results for fairness.
 
 ----
 
 ## Deep Learning
 
-Deep learning is a type of machine learning that uses algorithmic structures called neural networks. These are based upon the structure of the human brain. In our brains, brain cells called neurons form a complex network where they send electrical signals to each other to help us process information. In deep learning models, we use software modules called nodes to simulate the behavior of neurons.
+- Type of machine learning that uses algorithmic structures called neural networks (based upon the structure of the human brain).
+- In our brains, brain cells called neurons form a complex network where they send electrical signals to each other to help us process information.
+- In deep learning models, we use software modules called nodes to simulate the behavior of neurons.
+- Deep neural networks comprise layers of nodes, including an input layer, several hidden layers, and an output layer of nodes.
+- Every node in the neural network autonomously assigns weights to each feature. <u>Information flows through the network in a forward direction from input to output</u>.
 
-Deep neural networks comprise layers of nodes, including an input layer, several hidden layers, and an output layer of nodes. Every node in the neural network autonomously assigns weights to each feature. <u>Information flows through the network in a forward direction from input to output</u>.
-
-During training, the difference between the predicted output and the actual output is then calculated. The weights of the neurons are repeatedly adjusted to minimize the error. Deep learning can excel at tasks like image classification and natural language processing where there is a need to identify the complex relationship between data objects.
-
-> [!NOTE]
->
-> The concept of deep learning with neural networks has existed for some time. However, the required computing power wasn't visible for most businesses to obtain until the arrival of low-cost cloud computing. Because anyone can now readily use powerful computing resources in the cloud, neural networks have become the standard algorithmic approach to computer vision.
+During training, the difference between the predicted output and the actual output is then calculated. The weights of the neurons are repeatedly adjusted to minimize the error. Deep learning can excel at tasks like **image classification** and **natural language processing** where there is a need to identify the complex relationship between data objects.
 
 A big advantage of deep learning models for computer vision is that they don't need the relevant features given to them. They can identify patterns in images and extract the important features on their own. However, we might need to give a deep learning model millions of pictures of fish before it can accurately detect and label a fish in an image. And the compute infrastructure to train a deep learning model repeatedly on such a large dataset is going to cost more than the traditional approach.
 
@@ -195,20 +198,24 @@ A big advantage of deep learning models for computer vision is that they don't n
 > Both types of machine learning use statistical algorithms, but only deep learning uses neural networks to simulate human intelligence. As we've seen, deep learning models self-learn patterns, so they don't require as much work on selecting and extracting features.
 >
 > However, their infrastructure costs are significantly higher. 
+
 ----
+
 ### Generative AI
-Generative AI is accomplished by using deep learning models that are pre-trained on extremely large datasets containing strings of text or, in AI terms, sequences. They use transformer neural networks, which change an input sequence, in Gen AI known as prompt, into an output sequence, which is the response to your prompt. Neural networks process the elements of a sequence sequentially one word at a time. Transformers process the sequence in parallel, which speeds up the training and allows much bigger datasets to be used.
-Large language models contain many billions of features, which captures a wide range of human knowledge. With all this training, large models are very flexible in the tasks they can perform. They outperform other ML approaches to natural language processing.
+
+- It is accomplished by using deep learning models that are pre-trained on extremely large datasets containing strings of text or, in AI terms, sequences.
+- They use transformer neural networks, which change an input sequence, in Gen AI known as prompt, into an output sequence, which is the response to your prompt.
+- Neural networks process the elements of a sequence sequentially one word at a time.
+- Transformers process the sequence in parallel, which speeds up the training and allows much bigger datasets to be used.
+- Large language models contain many billions of features, which captures a wide range of human knowledge. With all this training, large models are very flexible in the tasks they can perform. They outperform other ML approaches to natural language processing.
 
 They excel at understanding human language so they can read long articles and summarize them. They are also great at generating text that's similar to the way a human would. As a result, they are good at language translation and even writing original stories, letters, articles, and poetry.
-
-They even know computer programming languages and can write code for software developers.
 
 > [!TIP]
 >
 > If you want to try Amazon Bedrock for yourself for free, you can build your own AI app at partyrock.aws.
 
-
+----
 
 ## Practical Use Cases for AI
 
@@ -232,7 +239,7 @@ They even know computer programming languages and can write code for software de
   - Consider a rules-based system (deterministic)
 - Systems must be deterministics rather than probabilistics
 
-### Machine Learning Problem Types
+## Machine Learning Problem Types
 
 - If your dataset consists of features or attributes as inputs with <u>labeled target values</u> as outputs, then you have a **supervised learning** problem. In this type of problem, you train your model with data containing known inputs and outputs.
 
@@ -244,7 +251,7 @@ They even know computer programming languages and can write code for software de
   - When your data needs to be **separated** **into** discrete **groups**, you have a **clustering** problem. 
   - If you are seeking to **spot outliers** in your data, then you have an **anomaly detection** problem.
 
-#### Supervised Learning - Classification
+## Supervised Learning - Classification
 
 - Binary
 
@@ -258,7 +265,7 @@ They even know computer programming languages and can write code for software de
 
     Multiclass classification assigns an input to one of several classes based on the input attributes. An example is the prediction of the topic most relevant to a tax document. A document might be classified as being about religion, politics, or finance, or as about one of several other predefined topic classes.
 
-#### Supervised Regression
+## Supervised Regression
 
 When your target values are mathematically continuous, then you have a regression problem. Regression estimates the value of dependent target variable based on one or more other variables, or attributes that are correlated with it. Linear regression is when there is a direct linear relationship between the inputs and output.
 
@@ -286,23 +293,23 @@ When your target values are mathematically continuous, then you have a regressio
 >
 > Both logistic regression and linear regression require a significant amount of labeled data for the models to become accurate in predictions. 
 
-#### Cluster Analysis
+## Cluster Analysis
 
 Cluster analysis is a class of techniques that are used to classify data objects into groups, called clusters. It attempts to find discrete groupings within data. Members of a group are similar as possible to one another, and as different as possible from members of other groups. You define the features or attributes that you want the algorithm to use to determine similarity. Then you select a distance function to measure similarity and specify the number of clusters, or groups, you want for the analysis.
 
 An example of clustering is segmenting customers into groups by purchase history or clickstream activity.
 
-#### Anomaly Detection
+## Anomaly Detection
 
 Anomaly detection is the identification of rare items, events, or observations in the data, which raise suspicions, because they differ significantly from the rest of the data. The identification of anomalous items can be used, for example, to detect failed sensors or medical errors.
 
-### AWS Services
+## AWS Services
 
 AWS offers several pre-trained AI services that are accessible through APIs. Before embarking on the effort and cost to build a custom model, you should investigate whether an existing service for your use case already exists. 
 
-#### Computer Vision
+### Computer Vision
 
-##### Amazon Reckognition
+#### Amazon Reckognition
 
 Amazon Rekognition is a pre-trained deep learning service for computer vision. It meets the needs of several common computer vision use cases without requiring customers to train their own models. It works with both images and videos, including streaming videos.
 
@@ -324,13 +331,13 @@ Amazon Rekognition is a pre-trained deep learning service for computer vision. I
 
   Typically, companies that allow users to upload content to their application need to employ people to screen content before letting it get published. Amazon Rekognition can detect and filter explicit, inappropriate, and violent content in images and videos, and also flag content that should be reviewed by humans.
 
-#### Text And Document Analysis
+### Text And Document Analysis
 
-##### Amazon Textract
+#### Amazon Textract
 
 More than just optical character recognition, Amazon Textract extracts text, handwriting, forms, and tabular data from scanned documents. 
 
-##### Amazon Comprehend
+#### Amazon Comprehend
 
 Amazon Comprehend is a natural language processing service that helps discover insights and relationships in text. A common use case to classify the sentiment of customer feedback. For example, AWS uses Amazon Comprehend to analyze the comments left on Certification exams. 
 
@@ -338,47 +345,47 @@ Amazon Comprehend is a natural language processing service that helps discover i
 >
 > Frequently, Amazon Textract and Amazon Comprehend are used together. Content extracted by Amazon Textract can be given to Amazon Comprehend for sentiment analysis. A common ML use case is detecting personal identifiable information, PII, in text. If you were collecting data for training an ML model to detect spam emails, you would want to be able to find PII and remove it from training data. Amazon Comprehend is pre-trained to find PII. 
 
-#### Language AI
+### Language AI
 
-##### Amazon Lex
+#### Amazon Lex
 
 Amazon Lex helps build voice and text interfaces to engage with customers. It uses the same technology that powers Amazon Alexa devices. Some common use cases are customer service chatbots and interactive voice response systems, that route calls to the proper agent in a call center.
 
-##### Amazon Transcribe
+#### Amazon Transcribe
 
 Amazon Transcribe is an automatic speech recognition service that supports over 100 languages. Transcribe is designed to process live and recorded audio or video input to provide high quality transcriptions for search and analysis. A common use case is to caption streaming audio in real time.
 
-##### Amazon Polly
+#### Amazon Polly
 
 Amazon Polly turns text into natural-sounding speech in dozens of languages. It uses deep learning technologies to synthesize human speech. Common use cases include converting articles to speech and prompting callers in interactive voice response systems. The ability of AI to create natural-sounding voices is enabling companies to increase engagement with their products and be more accessible to visually impaired customers.
 
-#### Customer Experience
+### Customer Experience
 
-##### Amazon Kendra
+#### Amazon Kendra
 
 Amazon Kendra uses machine learning to perform an intelligent search of enterprise systems to quickly find content. It uses natural language processing to understand questions like, "How do I connect my Echo Plus to my network?" It responds with results based on an intelligent understanding of the question.
 
-##### Amazon Personalize
+#### Amazon Personalize
 
 Amazon Personalize allows businesses to automatically generate personalized recommendations for their customers in industries such as retail, media and, entertainment. For example, an ecommerce app can include a section called "you might also like" with personalized product recommendations to customers who will likely be interested in those products. Businesses can also use Amazon Personalize to run more effective marketing campaigns by segmenting customers according to their preferences.
 
-##### Amazon Translate
+#### Amazon Translate
 
 Amazon Translate fluently translates text between 75 different languages. It is built on a neural network that considers the entire context of the source sentence and the translation it has generated so far. It uses this information to create more accurate and fluent translations. One use case is real-time translation in an online chat application.
 
-#### Business Metrics
+### Business Metrics
 
-##### Amazon Forecast
+#### Amazon Forecast
 
 Amazon Forecast is an AI service for time series forecasting. By providing Amazon Forecast with historical time series data, you can predict future points in the series. Time series forecasting is useful in multiple domains, including retail, financial planning, supply chain, and healthcare. For example, you can use it to project sales and manage inventory levels.
 
-##### Amazon Fraud Detector
+#### Amazon Fraud Detector
 
 Amazon Fraud Detector helps to identify potentially fraudulent online activities such as online payment fraud and creation of fake accounts. It features pre-trained data models to detect fraud in online transactions, product reviews, checkout and payments, new accounts, and account takeovers.
 
-#### Generative AI
+### Generative AI
 
-##### Amazon Bedrock
+#### Amazon Bedrock
 
 - Foundation Models (FMs)
 - Can customize with training data or Retrieval Augmented Generation
@@ -389,13 +396,13 @@ Amazon Bedrock is a fully managed service to build generative AI applications on
 >
 > When a generative AI model calls an external knowledge system to retrieve information outside its training data, this is called **Retrieval Augmented Generation** or RAG for short.
 
-#### Model Development
+### Model Development
 
 > [!TIP]
 >
 > Use the Amazon SageMaker family of services when you need more customized machine learning models or workflows that go beyond the prebuilt functionalities offered by the core AI services.
 
-##### Amazon SageMaker
+#### Amazon SageMaker
 
 - Fully managed ML service
 - Data preparation and labeling
@@ -405,7 +412,7 @@ Amazon Bedrock is a fully managed service to build generative AI applications on
 
 Amazon SageMaker provides machine learning capabilities for data scientists and developers to prepare, build, train, and deploy high-quality ML models efficiently. It comprises several services that are optimized for building and training custom machine learning models. These include data preparation and labeling, large-scale parallel training on multiple instances or GPU clusters, model deployment, and real-time inference endpoints To accelerate the development process, SageMaker offers pre-trained models that you can use as a starting point and reduce the resources needed for data preparation and model training.
 
-
+----
 
 ## ML Development Lifecycle
 
@@ -671,7 +678,7 @@ Amazon SageMaker Model Monitor, which is a capability of Amazon SageMaker, monit
 
 You define a monitoring schedule that collects data from your endpoints and detects changes against the baseline. It analyzes the data based upon built-in rules or rules that you define. You can view the results in Amazon SageMaker Studio and see which rules were violated. The results are also sent to Amazon CloudWatch, where you can configure alarms to take remedial actions, such as starting a re-training process.
 
-#### MLOps
+### MLOps
 
 Automation is an important part of implementing and operating repeatable and reliable business processes. So let's look at how we can use automation in our ML pipelines. MLOps is about using these established best practices of software engineering and applying them to machine learning model development. It's about automating manual tasks, testing, and evaluating code before release, and responding automatically to incidents. 
 
@@ -689,31 +696,31 @@ They can institute sound operational practices in deploying and monitoring produ
 
 It's important to mention a few other services for MLOps:
 
-##### AWS CodeCommit (deprecated)
+#### AWS CodeCommit (deprecated)
 
 Repositories are where you keep versions of your code and models. AWS CodeCommit is a source code repository that you can use for storing your inference code. It is comparable to GitHub, a third-party source code repository.
 
-##### SageMaker Feature Store
+#### SageMaker Feature Store
 
 SageMaker Feature Store is a repository for the feature definitions of your training data.
 
-##### SageMaker Model Registry
+#### SageMaker Model Registry
 
 SageMaker Model Registry is a centralized repository for your trained models and history. 
 
-##### AWS Step Functions
+#### AWS Step Functions
 
 AWS Step Functions, which lets you define a workflow with a visual drag-and-drop interface. It gives you the ability to build serverless workflows that integrate various AWS services and custom application logic.
 
-##### Amazon Managed Workflows for Apache Airflow
+#### Amazon Managed Workflows for Apache Airflow
 
-Apache Airflow is an open source tool used to programmatically author, schedule, and monitor sequences of processes and tasks referred to as workflows. With Amazon Managed Workflows for Apache Airflow, you can use Apache Airflow and Python to create workflows without having to manage the underlying infrastructure for scalability, availability, and security. 
+Apache Airflow is an open source tool used to programmatically author, schedule, and monitor sequences of processes and tasks referred to as workflows. With Amazon Managed Workflows for Apache Airflow, you can use Apache Airflow and Python to create workflows without having to manage the underlying infrastructure for scalability, availability, and security.
 
-#### Confusion Matrix
+### Confusion Matrix
 
 A confusion matrix is used to summarize the performance of a classification model when it's evaluated against task data. The simplest way would be a binary classification model where the output is a simple binary result, yes or a no, positive or a negative. A confusion matrix is a table with actual data typically across the top and the predicted values on the left. The confusion matrix shows the number of true and false positives and negatives. 
 
-##### Accuracy
+#### Accuracy
 
 One metric that is sometimes used to judge a model's performance is accuracy, which is simply the percentage of correct predictions. Accuracy measures how close the predicted class values are to the actual values. Values for accuracy metrics vary between zero and one. A value of one indicates perfect accuracy and zero indicates complete inaccuracy. The formula for accuracy is the number of true positives plus true negatives divided by the total number of predictions.
 
@@ -721,11 +728,11 @@ One metric that is sometimes used to judge a model's performance is accuracy, wh
 >
 > Though accuracy is understandable, it is not a good metric when the dataset is imbalanced.
 
-##### Precision
+#### Precision
 
 Precision measures how well an algorithm predicts true positives out of all the positives that it identifies. The formula is the number of true positives divided by the number of true positives, plus the number of false positives. This is a good quality metric to use when your goal is to minimize the number of false positives. Precision measures how well an algorithm predicts true positives out of all the positives that it identifies.
 
-##### Recall
+#### Recall
 
 If we want to minimize the false negatives, then we can use a metric known as recall. For example, we want to make sure that we don't miss if someone has a disease and we say they don't. The formula is the number of true positives divided by the number of true positives plus the number of false negatives. Recall is also known as sensitivity or the true positive rate.
 
@@ -733,60 +740,47 @@ If we want to minimize the false negatives, then we can use a metric known as re
 >
 > There is a tradeoff between precision and recall because you can't optimize a model for both.
 
-##### F1 Score
+#### F1 Score
 
 However, if recall and precision are both important to us, the F1 score balances precision and recall by combining them in a single metric.
 
-##### False Positive Rate (FPR)
+#### False Positive Rate (FPR)
 
 Another metric we can calculate from our confusion matrix is the false positive rate, which is the false positives divided by the sum of the false positives and true negatives.
 
-##### Specificity, or True Negative Rate (TNR)
+#### Specificity, or True Negative Rate (TNR)
 
 Closely related to the false positive rate is the true negative rate, which is the ratio of the true negatives to the sum of the false  positives and true negatives.
 
-##### Receiver Operating Characteristics (ROC)
-
-<img src="/Users/akzsato/Library/Application Support/typora-user-images/image-20240908095121981.png" alt="image-20240908095121981" style="zoom:50%;" />
+#### Receiver Operating Characteristics (ROC)
 
 The area under the curve, also known as AUC metric, is used to compare  and evaluate binary classification by algorithms that return  probabilities, such as logistic regression. To map the probabilities  into discrete predictions such as true or false, these are compared  against a threshold value. A threshold is a value that the model uses to make a decision between the two possible classes. It can converts the  probability of a sample being part of a class into a binary decision. 
 
 The true positive rate is plotted against the false positive rate for  increasing threshold values. The threshold values are represented by the red dashed line in the graph. The relevant curve is called the receiver operating characteristic curve. You can see that increasing the  threshold results in fewer false positives, but more false negatives.  AUC is the area under this receiver operating characteristic curve. AUC  provides an aggregated measure of the model performance across the full  range of thresholds. AUC scores vary between zero and one. A score of  one indicates perfect accuracy and a score of one half, or 0.5,  indicates that the prediction is no better than a random classifier.
 
-#### Regression Model Errors
+### Regression Model Errors
 
 Recall that in linear regression, we're fitting a line to the points in a dataset. The distance between the line and the actual values is the  error.
 
-- Mean Squared Error (MSE)
-
-  A metric that we can use to evaluate a linear regression model is called the mean squared error, MSE. To compute it, we take the difference  between the prediction and actual value, square the difference, and then compute the average of all square differences. MSE values are always  positive. The better a model is at predicting the actual values, the  smaller the MSE value is.
-
+- Mean Squared Error (MSE)    
+  A metric that we can use to evaluate a linear regression model is called the mean squared error, MSE. To compute it, we take the difference  between the prediction and actual value, square the difference, and then compute the average of all square differences. MSE values are always  positive. The better a model is at predicting the actual values, the smaller the MSE value is.
   - Average of the square of the errors
-
 - Root Mean Squared Error (RMSE)
-
-  - Square root of MSE
-
+  - Square root of MSE    
     Another metric that is commonly used is the root mean squared error,  which is the square root of the mean squared error. The advantage of  using this square root of the MSE is that the units match the dependent  variable. For example, if the height is measured in inches, then the  MSE will be in square inches, but the RMSE is in inches, so the RMSE is  easier for us to interpret. 
 
     > [!NOTE]
     >
     > Because the errors are squared, the mean squared error and root means  squared error metrics emphasize the impact of outliers. These are good  metrics, but incorrect predictions can be very costly. If that is not  desired, a different metric called mean absolute error averages the  absolute values of the errors, so it doesn't emphasize the large errors.
-
-- Mean Absolute Error (MAE)
-
+- Mean Absolute Error (MAE)    
   These are good metrics, but incorrect predictions can be very costly. If that is not desired, a different metric called mean absolute error  averages the absolute values of the errors, so it doesn't emphasize the  large errors.
 
 ### AI/ML Business Metrics
 
 - Define business goals at the beginning
-
 - Identify business metrics to improve
-
 - Evaluate risk and cost of errors
-
 - Measure actual improvement
-
 - Measure actual costs
 
   > [!NOTE]
@@ -794,9 +788,7 @@ Recall that in linear regression, we're fitting a line to the points in a datase
   > Also, consider the actual cost of building and operating the model and  compare this cost with the initial cost benefit model. This way you'll  be able to calculate the return on investment. AWS allows you to define  cost allocation tags that are assigned to the resources that you create. For example, you can define a tag with the name of ML project and the  name of your project as the value. You add that tag to all the resources used in your pipeline. Then you can filter the cost reports in AWS Cost Explorer to determine the actual AWS charges incurred for the project.
 
 - Compare with cost-benefit model
-
 - Determine return on investiment (ROI)
-
 
 ----
 
