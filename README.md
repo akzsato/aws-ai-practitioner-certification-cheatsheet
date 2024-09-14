@@ -77,9 +77,9 @@ This reference guide should provide a structured way for you to organize and rev
 
 > [!TIP]
 >
-> - For an exam self-entitled as "Practitioner", I considered it a relatively rough test
-> - I would consider it as a "Specialty Exam", because it implies knowledge in domains such as: endpoints, API calls, service integration, IAM, KMS, S3 and other topics required by an SA Associate Exam.
 > - The [AWS Skillbuilder's Standard Exam Prep Course](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/19554/exam-prep-standard-course-aws-certified-ai-practitioner-aif-c01) is very complete and provides support to face this exam with ease. There are about 6 hours of videos, in addition to a [20-question practice set](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/19790/exam-prep-official-practice-question-set-aws-certified-ai-practitioner-aif-c01-english). If you can have access to the [Enhanced Exam Prep Course](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/20536/exam-prep-enhanced-course-aws-certified-ai-practitioner-aif-c01-english-amazon) (which requires a paid subscription), it would be awesome because adds a plenty of more questions to the Practice Set, grouped by knowledge domain which will give you a clear perspective of needed domains to reinforce study. Also I would include valuable Flashcards, Lab assessment and an Escape Room game to validate your knowledge.
+> - Although this exam is considered a "Practitioner" exam, I would say that it is much closer to a "Specialty" exam due to the depth of knowledge required to perform well on the exam. Things like: endpoints, API calls, service integration, KMS, IAM, S3, among other topics required by the SA Associate exam.
+
 
 ----
 
