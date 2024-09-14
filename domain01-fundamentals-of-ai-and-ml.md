@@ -419,65 +419,59 @@ Amazon SageMaker provides machine learning capabilities for data scientists and 
 
 A machine learning pipeline is a series of interconnected steps that start with a business goal and finish with operating a deployed ML model. It starts with defining the problem, collecting and preparing training data, training the model, deploying, and finally, monitoring it. Some of these steps are an iterative process, and this is repeated until certain objectives are accomplished.
 
-<img src="/Users/akzsato/Library/Application Support/typora-user-images/image-20240907113105129.png" alt="image-20240907113105129" />
 
 Machine learning models are dynamic by design. They are re-trained with new data, continually evaluated against performance and business metrics, monitoring for drifts and bias, and adjusted or rebuilt as needed. As a result, many prefer to think of the ML pipeline as a lifecycle, where parts, or even all of it, are repeated even after the model is deployed.
 
-<img src="/Users/akzsato/Library/Application Support/typora-user-images/image-20240907113327181.png" alt="image-20240907113327181" style="zoom:50%;" />
+----
 
 ### Defining The Problem
 
-- Identify the business goal
+#### Identify the business goal
 
-  The development of an ML model should always begin with identifying the business goal. An organization considering ML should have a clear idea of the problem to be solved and the business value to be gained.
+The development of an ML model should always begin with identifying the business goal. An organization considering ML should have a clear idea of the problem to be solved and the business value to be gained.
 
-  - Success criteria
+#### Success criteria
 
-    More than just an idea, you must be able to measure business value against specific business objectives and success criteria. Without clear success criteria, you won't be able to evaluate the model or even determine if ML is the best solution.
+More than just an idea, you must be able to measure business value against specific business objectives and success criteria. Without clear success criteria, you won't be able to evaluate the model or even determine if ML is the best solution.
 
-  - Align stakeholders
+#### Align stakeholders
 
-    You'll need to align stakeholders to gain consensus on what the goal of the project is. After you determine your criteria for success, evaluate your organization's ability to move toward the target.
+You'll need to align stakeholders to gain consensus on what the goal of the project is. After you determine your criteria for success, evaluate your organization's ability to move toward the target.
 
-- Frame the ML problem
+#### Frame the ML problem
 
-  The target should be achievable and provide a clear path to production. Determine if ML is the appropriate approach for delivering your business goal. Evaluate all the options that you have available for achieving the goal. Determine how accurate the resulting outcomes would be while considering the cost and scalability of each approach. Ensure that enough relevant high-quality training data is available to the algorithm. 
+The target should be achievable and provide a clear path to production. Determine if ML is the appropriate approach for delivering your business goal. Evaluate all the options that you have available for achieving the goal. Determine how accurate the resulting outcomes would be while considering the cost and scalability of each approach. Ensure that enough relevant high-quality training data is available to the algorithm. 
 
-  - Defining the ML tasks: inputs, outputs and metrics
+- Defining the ML tasks: inputs, outputs and metrics    
+  Carefully evaluate the data to make sure that the correct data sources are available and accessible. Formulate the ML question in terms of input, desired outputs, and the performance metric to be optimized.
 
-    Carefully evaluate the data to make sure that the correct data sources are available and accessible. Formulate the ML question in terms of input, desired outputs, and the performance metric to be optimized.
+- Feasibility    
+  With the ML problem in mind, investigate all available options.
 
-  - Feasibility
+- Starting with the simplest models options    
+  Start with the simplest solution before determining that more complexity is required to meet the business objectives.
 
-    With the ML problem in mind, investigate all available options.
-
-  - Starting with the simplest models options
-
-    Start with the simplest solution before determining that more complexity is required to meet the business objectives.
-
-  - Cost-benefit analysis
-
-    Remember to perform a cost-benefit analysis to see if the project should move to the next phase.
-
-    
-
-  > [!IMPORTANT]
-  >
-  > AWS has introduced a number of AI services to democratize ML and make it accessible to anyone. They have identified many common use cases and developed easy, consumable, and fully trained ML models that are fully hosted by them. Because these services are pay as you go, it makes sense to evaluate them to see if they can meet the business goals. Many of these services allow you to customize their outputs.
-  >
-  > For example, with <u>Amazon Comprehend</u>, you can create a custom classifier that uses your own categories by supplying it with your training data. If a hosted service doesn't achieve the objectives, the next consideration should be building your own model by starting with an existing one.
-  >
-  > For example, for generative AI use cases, <u>Amazon Bedrock</u> lets you start with a fully trained foundation model. You can fine-tune this model with your own data using transfer learning.
-  >
-  > For other use cases, <u>Amazon SageMaker</u> has a number of open source pre-trained models to jumpstart your model development. The most difficult and costly approach is to train your own model from scratch. As we will see in later sections, this is not only the most technically challenging, but also requires the most responsibility for security and compliance.
-  >
-  > <u>SageMaker JumpStart</u> provides pre-trained AI foundation models and task-specific models for computer vision and natural language processing problem types. These are pre-trained on large public datasets. You have the option of fine-tuning the model with incremental training using your own dataset. This is a process known as **transfer learning**. Using a pre-trained model is a large savings in cost and development time over creating a custom model from scratch. 
+- Cost-benefit analysis    
+  Remember to perform a cost-benefit analysis to see if the project should move to the next phase.
 
 
+> [!IMPORTANT]
+>
+> AWS has introduced a number of AI services to democratize ML and make it accessible to anyone. They have identified many common use cases and developed easy, consumable, and fully trained ML models that are fully hosted by them. Because these services are pay as you go, it makes sense to evaluate them to see if they can meet the business goals. Many of these services allow you to customize their outputs.
+>
+> For example, with <u>Amazon Comprehend</u>, you can create a custom classifier that uses your own categories by supplying it with your training data. If a hosted service doesn't achieve the objectives, the next consideration should be building your own model by starting with an existing one.
+>
+> For example, for generative AI use cases, <u>Amazon Bedrock</u> lets you start with a fully trained foundation model. You can fine-tune this model with your own data using transfer learning.
+>
+> For other use cases, <u>Amazon SageMaker</u> has a number of open source pre-trained models to jumpstart your model development. The most difficult and costly approach is to train your own model from scratch. As we will see in later sections, this is not only the most technically challenging, but also requires the most responsibility for security and compliance.
+>
+> <u>SageMaker JumpStart</u> provides pre-trained AI foundation models and task-specific models for computer vision and natural language processing problem types. These are pre-trained on large public datasets. You have the option of fine-tuning the model with incremental training using your own dataset. This is a process known as **transfer learning**. Using a pre-trained model is a large savings in cost and development time over creating a custom model from scratch. 
+
+----
 
 ### Processing Data
 
-- Collecting training data
+#### Collecting training data
 
   - Data sources
 
@@ -535,7 +529,7 @@ Machine learning models are dynamic by design. They are re-trained with new data
   >
   > <u>Amazon SageMaker Feature Store</u> is a centralized store for features and associated metadata, so features can be easily discovered and reused. Feature Store makes it easy to create, share, and manage features for ML development. Feature Store accelerates this process by reducing repetitive data processing and curation work required to convert raw data into features for training an ML algorithm. You can create workflow pipelines that convert raw data into features and add them to feature groups. 
 
-
+----
 
 ### Teach The Model: Train, Tune, And Evaluate
 
@@ -597,6 +591,8 @@ The next phase of the pipeline is where we get to train, tune, and evaluate the 
 
   - Metrics targets
 
+----
+
 ### Deploy The Model
 
 Once you have a fully trained, tuned, and evaluated model, you need to make it available for use. The first decision is whether you need batch or real-time inferencing or something in between.
@@ -655,6 +651,8 @@ Once you have a fully trained, tuned, and evaluated model, you need to make it a
 
         Real-time inference is ideal for inference workloads where you need real-time interactive responses from your model. Use real-time inference for a persistent and fully managed endpoint REST API that can handle sustained traffic backed by the instance type of your choice. The ML instances remain available to receive requests and return a response in real time.
 
+----
+
 ### Monitor The Model
 
 No matter how great your model performs initially, model performance could degrade over time for reasons such as data quality, model quality, and model bias. The final stage of the ML pipeline is to monitor your model.
@@ -681,9 +679,12 @@ You define a monitoring schedule that collects data from your endpoints and dete
 
 ### MLOps
 
-Automation is an important part of implementing and operating repeatable and reliable business processes. So let's look at how we can use automation in our ML pipelines. MLOps is about using these established best practices of software engineering and applying them to machine learning model development. It's about automating manual tasks, testing, and evaluating code before release, and responding automatically to incidents. 
-
-MLOps can streamline model delivery across the machine learning development lifecycle. Because the cloud uses API based services, everything is treated as software. This includes the infrastructure used in ML pipelines. The entire infrastructure can be described in software and deployed and redeployed in repeatable fashion. This lets data scientists quickly spin up the infrastructure needed to build and test a model so they can run experiments and make continual improvements.
+- Automation is an important part of implementing and operating repeatable and reliable business processes. 
+- MLOps is about using these established best practices of software engineering and applying them to machine learning model development.
+- It's about automating manual tasks, testing, and evaluating code before release, and responding automatically to incidents. 
+- MLOps can streamline model delivery across the machine learning development lifecycle. 
+- 
+- Because the cloud uses API based services, everything is treated as software. This includes the infrastructure used in ML pipelines. The entire infrastructure can be described in software and deployed and redeployed in repeatable fashion. This lets data scientists quickly spin up the infrastructure needed to build and test a model so they can run experiments and make continual improvements.
 
 Like DevOps, version control is critical for tracking lineage and being able to inspect a past configuration. With MLOps, everything gets versioned, including the training data. Other key MLOps principles are monitoring deployments to detect potential issues and automating re-training because of issues or data and code changes. One of the benefits of MLOps is productivity, automation and providing self-service environments and infrastructure let data engineers and data scientists move forward.
 
@@ -763,16 +764,20 @@ The true positive rate is plotted against the false positive rate for  increasin
 
 Recall that in linear regression, we're fitting a line to the points in a dataset. The distance between the line and the actual values is the  error.
 
-- Mean Squared Error (MSE)    
-  A metric that we can use to evaluate a linear regression model is called the mean squared error, MSE. To compute it, we take the difference  between the prediction and actual value, square the difference, and then compute the average of all square differences. MSE values are always  positive. The better a model is at predicting the actual values, the smaller the MSE value is.
-  - Average of the square of the errors
-- Root Mean Squared Error (RMSE)
-  - Square root of MSE    
-    Another metric that is commonly used is the root mean squared error,  which is the square root of the mean squared error. The advantage of  using this square root of the MSE is that the units match the dependent  variable. For example, if the height is measured in inches, then the  MSE will be in square inches, but the RMSE is in inches, so the RMSE is  easier for us to interpret. 
+#### Mean Squared Error (MSE)    
 
-    > [!NOTE]
-    >
-    > Because the errors are squared, the mean squared error and root means  squared error metrics emphasize the impact of outliers. These are good  metrics, but incorrect predictions can be very costly. If that is not  desired, a different metric called mean absolute error averages the  absolute values of the errors, so it doesn't emphasize the large errors.
+A metric that we can use to evaluate a linear regression model is called the mean squared error, MSE. To compute it, we take the difference  between the prediction and actual value, square the difference, and then compute the average of all square differences. MSE values are always  positive. The better a model is at predicting the actual values, the smaller the MSE value is.
+
+  - Average of the square of the errors
+
+#### Root Mean Squared Error (RMSE)
+- Square root of MSE    
+  Another metric that is commonly used is the root mean squared error,  which is the square root of the mean squared error. The advantage of  using this square root of the MSE is that the units match the dependent  variable. For example, if the height is measured in inches, then the  MSE will be in square inches, but the RMSE is in inches, so the RMSE is  easier for us to interpret. 
+
+> [!NOTE]
+>
+> Because the errors are squared, the mean squared error and root means  squared error metrics emphasize the impact of outliers. These are good  metrics, but incorrect predictions can be very costly. If that is not  desired, a different metric called mean absolute error averages the  absolute values of the errors, so it doesn't emphasize the large errors.
+
 - Mean Absolute Error (MAE)    
   These are good metrics, but incorrect predictions can be very costly. If that is not desired, a different metric called mean absolute error  averages the absolute values of the errors, so it doesn't emphasize the  large errors.
 
@@ -784,9 +789,9 @@ Recall that in linear regression, we're fitting a line to the points in a datase
 - Measure actual improvement
 - Measure actual costs
 
-  > [!NOTE]
-  >
-  > Also, consider the actual cost of building and operating the model and  compare this cost with the initial cost benefit model. This way you'll  be able to calculate the return on investment. AWS allows you to define  cost allocation tags that are assigned to the resources that you create. For example, you can define a tag with the name of ML project and the  name of your project as the value. You add that tag to all the resources used in your pipeline. Then you can filter the cost reports in AWS Cost Explorer to determine the actual AWS charges incurred for the project.
+> [!NOTE]
+>
+> Also, consider the actual cost of building and operating the model and  compare this cost with the initial cost benefit model. This way you'll  be able to calculate the return on investment. AWS allows you to define  cost allocation tags that are assigned to the resources that you create. For example, you can define a tag with the name of ML project and the  name of your project as the value. You add that tag to all the resources used in your pipeline. Then you can filter the cost reports in AWS Cost Explorer to determine the actual AWS charges incurred for the project.
 
 - Compare with cost-benefit model
 - Determine return on investiment (ROI)
