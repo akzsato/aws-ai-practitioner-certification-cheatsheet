@@ -253,40 +253,31 @@ They excel at understanding human language so they can read long articles and su
 
 ## Supervised Learning - Classification
 
-- Binary
-
-  - Probability that something is true
-
+### Binary
+  - Probability that something is true    
     Binary classification assigns an input to one of two predefined and mutually exclusive classes based on its attributes. A medical diagnosis for whether an individual has a disease or not, based on the results of diagnostic tests is an example of binary classification.
 
-- Multiclass
-
-  - Prediction of a class
-
+### Multiclass
+  - Prediction of a class    
     Multiclass classification assigns an input to one of several classes based on the input attributes. An example is the prediction of the topic most relevant to a tax document. A document might be classified as being about religion, politics, or finance, or as about one of several other predefined topic classes.
 
 ## Supervised Regression
 
 When your target values are mathematically continuous, then you have a regression problem. Regression estimates the value of dependent target variable based on one or more other variables, or attributes that are correlated with it. Linear regression is when there is a direct linear relationship between the inputs and output.
 
-- Simple linear regression
-
-  - Single independent variable
-
+### Simple linear regression
+  - Single independent variable    
     Simple linear regression uses a single independent variable, such as weight, to predict someone's height
 
-- Multiple linear regression
-
-  - Multiple independent variables
-
+### Multiple linear regression
+  - Multiple independent variables    
     Multiple independent variables, such as weight and age, then we have a multiple linear regression problem. Another example is the prediction of house prices using features like the number of bathrooms, bedrooms, the square footage of the house and garden. Regression analysis can create a model that takes one or more of these features as an input to predict the price of a house.
 
-- Logistic regression
+### Logistic regression
 
   - Prediction between 0 and 1
 
-  - Single or multiple independent variables
-
+  - Single or multiple independent variables     
     Logistic regression is used to measure the probability of an event occurring. The prediction is a value between zero and one, where zero indicates an event that is unlikely to happen, and one indicates a maximum likelihood that it will happen. Logistic equations use logarithmic functions to compute the regression line. It can use one or multiple independent variables. An example is predicting if a person will get heart disease based on body mass index, BMI, smoking status, and genetic predisposition. Another example would be predicting whether a financial transaction is fraud when there are transactions labeled as fraud and not fraud used for training.
 
 > [!TIP]
@@ -295,13 +286,15 @@ When your target values are mathematically continuous, then you have a regressio
 
 ## Cluster Analysis
 
-Cluster analysis is a class of techniques that are used to classify data objects into groups, called clusters. It attempts to find discrete groupings within data. Members of a group are similar as possible to one another, and as different as possible from members of other groups. You define the features or attributes that you want the algorithm to use to determine similarity. Then you select a distance function to measure similarity and specify the number of clusters, or groups, you want for the analysis.
-
-An example of clustering is segmenting customers into groups by purchase history or clickstream activity.
+- A class of techniques that are used to classify data objects into groups, called clusters.
+- It attempts to find discrete groupings within data.
+- Members of a group are similar as possible to one another, and as different as possible from members of other groups.
+- You define the features or attributes that you want the algorithm to use to determine similarity.
+- Then you select a distance function to measure similarity and specify the number of clusters, or groups, you want for the analysis.
 
 ## Anomaly Detection
 
-Anomaly detection is the identification of rare items, events, or observations in the data, which raise suspicions, because they differ significantly from the rest of the data. The identification of anomalous items can be used, for example, to detect failed sensors or medical errors.
+- It is the identification of rare items, events, or observations in the data which raise suspicions, because they differ significantly from the rest of the data.
 
 ## AWS Services
 
@@ -313,23 +306,23 @@ AWS offers several pre-trained AI services that are accessible through APIs. Bef
 
 Amazon Rekognition is a pre-trained deep learning service for computer vision. It meets the needs of several common computer vision use cases without requiring customers to train their own models. It works with both images and videos, including streaming videos.
 
-- Facial comparison and analysis
+- Facial comparison and analysis    
+  It can be used to verify someone's identity by comparing their image with a reference image. It'll automatically recognize and find them in images or stored in streaming videos. 
 
-  It can be used to verify someone's identity by comparing their image with a reference image, like an employee's badge or a driver's license. One of the things you can do with Amazon Rekognition is give it a collection of labeled images of faces. For example, a company's employees. It'll automatically recognize and find them in images or stored in streaming videos. 
+- Object detection and labeling    
+  - Amazon Rekognition can detect and label objects, which can be used to make an image or video library searchable.
+  - It can also be used in security system to detect and identify objects in real-time streaming video and send out alerts.
+  - You can get Amazon Rekognition to recognize custom or proprietary objects by giving it some labeled images to learn from. 
 
-- Object detection and labeling
-
-  Amazon Rekognition can detect and label objects, which can be used to make an image or video library searchable. It can also be used in security system to detect and identify objects in real-time streaming video and send out alerts. You can get Amazon Rekognition to recognize custom or proprietary objects by giving it some labeled images to learn from. 
-
-  - Custom labeling
-
+  - Custom labeling    
     You can get Amazon Rekognition to recognize custom or proprietary objects by giving it some labeled images to learn from. 
 
 - Text detection
 
-- Content moderation
+- Content moderation    
+  - It can detect and filter explicit, inappropriate, and violent content in images and videos, and also flag content that should be reviewed by humans.
 
-  Typically, companies that allow users to upload content to their application need to employ people to screen content before letting it get published. Amazon Rekognition can detect and filter explicit, inappropriate, and violent content in images and videos, and also flag content that should be reviewed by humans.
+----
 
 ### Text And Document Analysis
 
@@ -345,6 +338,8 @@ Amazon Comprehend is a natural language processing service that helps discover i
 >
 > Frequently, Amazon Textract and Amazon Comprehend are used together. Content extracted by Amazon Textract can be given to Amazon Comprehend for sentiment analysis. A common ML use case is detecting personal identifiable information, PII, in text. If you were collecting data for training an ML model to detect spam emails, you would want to be able to find PII and remove it from training data. Amazon Comprehend is pre-trained to find PII. 
 
+----
+
 ### Language AI
 
 #### Amazon Lex
@@ -358,6 +353,8 @@ Amazon Transcribe is an automatic speech recognition service that supports over 
 #### Amazon Polly
 
 Amazon Polly turns text into natural-sounding speech in dozens of languages. It uses deep learning technologies to synthesize human speech. Common use cases include converting articles to speech and prompting callers in interactive voice response systems. The ability of AI to create natural-sounding voices is enabling companies to increase engagement with their products and be more accessible to visually impaired customers.
+
+----
 
 ### Customer Experience
 
@@ -373,6 +370,8 @@ Amazon Personalize allows businesses to automatically generate personalized reco
 
 Amazon Translate fluently translates text between 75 different languages. It is built on a neural network that considers the entire context of the source sentence and the translation it has generated so far. It uses this information to create more accurate and fluent translations. One use case is real-time translation in an online chat application.
 
+-----
+
 ### Business Metrics
 
 #### Amazon Forecast
@@ -382,6 +381,8 @@ Amazon Forecast is an AI service for time series forecasting. By providing Amazo
 #### Amazon Fraud Detector
 
 Amazon Fraud Detector helps to identify potentially fraudulent online activities such as online payment fraud and creation of fake accounts. It features pre-trained data models to detect fraud in online transactions, product reviews, checkout and payments, new accounts, and account takeovers.
+
+----
 
 ### Generative AI
 
