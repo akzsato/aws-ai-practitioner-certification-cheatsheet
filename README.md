@@ -65,7 +65,7 @@ This reference guide should provide a structured way for you to organize and rev
 
 ## Table of Contents
 
-- Domain 01: Fundamentals of AI and ML
+- [Domain 01: Fundamentals of AI and ML](domain01-fundamentals-of-ai-and-ml.md)
 - Domain 02: Fundamentals of Generative AI
 - Domain 03: Application of Foundation Models
 - Domain 04: Guidelines for Responsible AI

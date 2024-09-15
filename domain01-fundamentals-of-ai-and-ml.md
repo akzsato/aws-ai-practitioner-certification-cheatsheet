@@ -562,30 +562,30 @@ The next phase of the pipeline is where we get to train, tune, and evaluate the 
     >
     > <u>Amazon SageMaker automatic model tuning</u>, AMT, also known as hyperparameter tuning, finds the best version of a model, by running many training jobs on your dataset. To do this, AMT uses the algorithm and ranges of hyperparameters that you specify. It then chooses the hyperparameter values that create a model that performs it best, as measured by a metric that you choose. For example, suppose that you are tuning a binary classification model. You can have automatic model tuning find the combination of hyperparameters that maximizes a metric known as the area under the curve. To use automatic model tuning, you can figure a tuning job that runs several training jobs inside a loop. You specify completion criteria as the number of jobs that are no longer improving the metric. The job will run until the completion criteria are satisfied.
 
-    > [!TIP]
-    >
-    > **Amazon SageMaker training**
-    >
-    > - Training jobs
-    >   - Training data location
-    >   - ML compute instances
-    >   - Training image
-    >   - Hyperparameters
-    >   - S3 output buckets
-    >
-    > **Amazon Sagemaker experiments**
-    >
-    > - Tracks inputs, parameter, configurations as separate runs
-    > - Compares runs against performance metrics
-    > - Visual interface
-    >
-    > **Amazon SageMaker automatic model tunning**
-    >
-    > - Automatically adjusts hyperparameters
-    > - Uses specified objective metrics
-    > - Tuning jobs
-    >   - Runs training jobs inside a loop
-    >   - Satisfies completion criteria
+> [!TIP]
+>
+> **Amazon SageMaker training**
+>
+> - Training jobs
+>   - Training data location
+>   - ML compute instances
+>   - Training image
+>   - Hyperparameters
+>   - S3 output buckets
+>
+> **Amazon Sagemaker experiments**
+>
+> - Tracks inputs, parameter, configurations as separate runs
+> - Compares runs against performance metrics
+> - Visual interface
+>
+> **Amazon SageMaker automatic model tunning**
+>
+> - Automatically adjusts hyperparameters
+> - Uses specified objective metrics
+> - Tuning jobs
+>   - Runs training jobs inside a loop
+>   - Satisfies completion criteria
 
 - Model Evaluation
 
@@ -677,7 +677,9 @@ Amazon SageMaker Model Monitor, which is a capability of Amazon SageMaker, monit
 
 You define a monitoring schedule that collects data from your endpoints and detects changes against the baseline. It analyzes the data based upon built-in rules or rules that you define. You can view the results in Amazon SageMaker Studio and see which rules were violated. The results are also sent to Amazon CloudWatch, where you can configure alarms to take remedial actions, such as starting a re-training process.
 
-### MLOps
+----
+
+## MLOps
 
 - Automation is an important part of implementing and operating repeatable and reliable business processes. 
 - MLOps is about using these established best practices of software engineering and applying them to machine learning model development.
@@ -718,11 +720,13 @@ AWS Step Functions, which lets you define a workflow with a visual drag-and-drop
 
 Apache Airflow is an open source tool used to programmatically author, schedule, and monitor sequences of processes and tasks referred to as workflows. With Amazon Managed Workflows for Apache Airflow, you can use Apache Airflow and Python to create workflows without having to manage the underlying infrastructure for scalability, availability, and security.
 
-### Confusion Matrix
+----
+
+## Confusion Matrix
 
 A confusion matrix is used to summarize the performance of a classification model when it's evaluated against task data. The simplest way would be a binary classification model where the output is a simple binary result, yes or a no, positive or a negative. A confusion matrix is a table with actual data typically across the top and the predicted values on the left. The confusion matrix shows the number of true and false positives and negatives. 
 
-#### Accuracy
+### Accuracy
 
 One metric that is sometimes used to judge a model's performance is accuracy, which is simply the percentage of correct predictions. Accuracy measures how close the predicted class values are to the actual values. Values for accuracy metrics vary between zero and one. A value of one indicates perfect accuracy and zero indicates complete inaccuracy. The formula for accuracy is the number of true positives plus true negatives divided by the total number of predictions.
 
@@ -730,11 +734,11 @@ One metric that is sometimes used to judge a model's performance is accuracy, wh
 >
 > Though accuracy is understandable, it is not a good metric when the dataset is imbalanced.
 
-#### Precision
+### Precision
 
 Precision measures how well an algorithm predicts true positives out of all the positives that it identifies. The formula is the number of true positives divided by the number of true positives, plus the number of false positives. This is a good quality metric to use when your goal is to minimize the number of false positives. Precision measures how well an algorithm predicts true positives out of all the positives that it identifies.
 
-#### Recall
+### Recall
 
 If we want to minimize the false negatives, then we can use a metric known as recall. For example, we want to make sure that we don't miss if someone has a disease and we say they don't. The formula is the number of true positives divided by the number of true positives plus the number of false negatives. Recall is also known as sensitivity or the true positive rate.
 
@@ -742,46 +746,55 @@ If we want to minimize the false negatives, then we can use a metric known as re
 >
 > There is a tradeoff between precision and recall because you can't optimize a model for both.
 
-#### F1 Score
+### F1 Score
 
 However, if recall and precision are both important to us, the F1 score balances precision and recall by combining them in a single metric.
 
-#### False Positive Rate (FPR)
+### False Positive Rate (FPR)
 
 Another metric we can calculate from our confusion matrix is the false positive rate, which is the false positives divided by the sum of the false positives and true negatives.
 
-#### Specificity, or True Negative Rate (TNR)
+### Specificity, or True Negative Rate (TNR)
 
 Closely related to the false positive rate is the true negative rate, which is the ratio of the true negatives to the sum of the false  positives and true negatives.
 
-#### Receiver Operating Characteristics (ROC)
+### Receiver Operating Characteristics (ROC)
+
+<img src="images/roc-auc-classification-evalutaion-metric.png" alt="ROC-AUC Classification Evalutation Metric" style="zoom: 40%">
 
 The area under the curve, also known as AUC metric, is used to compare  and evaluate binary classification by algorithms that return  probabilities, such as logistic regression. To map the probabilities  into discrete predictions such as true or false, these are compared  against a threshold value. A threshold is a value that the model uses to make a decision between the two possible classes. It can converts the  probability of a sample being part of a class into a binary decision. 
 
 The true positive rate is plotted against the false positive rate for  increasing threshold values. The threshold values are represented by the red dashed line in the graph. The relevant curve is called the receiver operating characteristic curve. You can see that increasing the  threshold results in fewer false positives, but more false negatives.  AUC is the area under this receiver operating characteristic curve. AUC  provides an aggregated measure of the model performance across the full  range of thresholds. AUC scores vary between zero and one. A score of  one indicates perfect accuracy and a score of one half, or 0.5,  indicates that the prediction is no better than a random classifier.
 
-### Regression Model Errors
+----
+
+## Regression Model Errors
 
 Recall that in linear regression, we're fitting a line to the points in a dataset. The distance between the line and the actual values is the  error.
 
-#### Mean Squared Error (MSE)    
+### Mean Squared Error (MSE)    
 
-A metric that we can use to evaluate a linear regression model is called the mean squared error, MSE. To compute it, we take the difference  between the prediction and actual value, square the difference, and then compute the average of all square differences. MSE values are always  positive. The better a model is at predicting the actual values, the smaller the MSE value is.
+- Used to evaluate a linear regression model.
+- It is the result of the difference between the prediction and actual value, square the difference, and then compute the average of all square differences.
+- MSE values are always positive.
+- The better a model is at predicting the actual values, the smaller the MSE value is.
+- Average of the square of the errors
 
-  - Average of the square of the errors
-
-#### Root Mean Squared Error (RMSE)
-- Square root of MSE    
-  Another metric that is commonly used is the root mean squared error,  which is the square root of the mean squared error. The advantage of  using this square root of the MSE is that the units match the dependent  variable. For example, if the height is measured in inches, then the  MSE will be in square inches, but the RMSE is in inches, so the RMSE is  easier for us to interpret. 
+### Root Mean Squared Error (RMSE)
+- Square root of MSE
+- Advantage of units matching the dependent variable.
+- RMSE is easier for us to interpret. 
 
 > [!NOTE]
 >
-> Because the errors are squared, the mean squared error and root means  squared error metrics emphasize the impact of outliers. These are good  metrics, but incorrect predictions can be very costly. If that is not  desired, a different metric called mean absolute error averages the  absolute values of the errors, so it doesn't emphasize the large errors.
+> Because the errors are squared, the mean squared error and root means squared error metrics emphasize the impact of outliers. These are good metrics, but incorrect predictions can be very costly. If that is not  desired, a different metric called mean absolute error averages the absolute values of the errors, so it doesn't emphasize the large errors.
 
-- Mean Absolute Error (MAE)    
-  These are good metrics, but incorrect predictions can be very costly. If that is not desired, a different metric called mean absolute error  averages the absolute values of the errors, so it doesn't emphasize the  large errors.
+### Mean Absolute Error (MAE)    
+  These are good metrics, but incorrect predictions can be very costly. If that is not desired, a different metric called mean absolute error averages the absolute values of the errors, so it doesn't emphasize the large errors.
 
-### AI/ML Business Metrics
+----
+
+## AI/ML Business Metrics
 
 - Define business goals at the beginning
 - Identify business metrics to improve
@@ -791,7 +804,7 @@ A metric that we can use to evaluate a linear regression model is called the mea
 
 > [!NOTE]
 >
-> Also, consider the actual cost of building and operating the model and  compare this cost with the initial cost benefit model. This way you'll  be able to calculate the return on investment. AWS allows you to define  cost allocation tags that are assigned to the resources that you create. For example, you can define a tag with the name of ML project and the  name of your project as the value. You add that tag to all the resources used in your pipeline. Then you can filter the cost reports in AWS Cost Explorer to determine the actual AWS charges incurred for the project.
+> Also, consider the actual cost of building and operating the model and compare this cost with the initial cost benefit model. This way you'll be able to calculate the return on investment. AWS allows you to define  cost allocation tags that are assigned to the resources that you create. For example, you can define a tag with the name of ML project and the name of your project as the value. You add that tag to all the resources used in your pipeline. Then you can filter the cost reports in AWS Cost Explorer to determine the actual AWS charges incurred for the project.
 
 - Compare with cost-benefit model
 - Determine return on investiment (ROI)
