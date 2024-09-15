@@ -760,7 +760,7 @@ Closely related to the false positive rate is the true negative rate, which is t
 
 ### Receiver Operating Characteristics (ROC)
 
-<img src="images/roc-auc-classification-evalutaion-metric.png" alt="ROC-AUC Classification Evalutation Metric" style="zoom: 40%">
+<img src="images/roc-auc-classification-evalutaion-metric.png" alt="ROC-AUC Classification Evalutation Metric" style="zoom:40%">
 
 The area under the curve, also known as AUC metric, is used to compare  and evaluate binary classification by algorithms that return  probabilities, such as logistic regression. To map the probabilities  into discrete predictions such as true or false, these are compared  against a threshold value. A threshold is a value that the model uses to make a decision between the two possible classes. It can converts the  probability of a sample being part of a class into a binary decision. 
 
